@@ -1,7 +1,12 @@
 from fastapi import FastAPI
 from datetime import datetime
 import socket
+from backend_servers.common import create_backend
 
+app = create_backend(
+    "Backend Server 1",
+    8001
+)
 app = FastAPI()
 
 SERVER_NAME = "Backend Server 1"
